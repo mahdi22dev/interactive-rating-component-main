@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --font-family: "Space Grotesk", sans-serif;
+  --Linear--gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --Red-: hsl(0, 100%, 66%);
+
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+}
+.container {
+  background-color: #fff;
+  width: 100%;
+  min-height: 100vh;
+  font-family: var(--font-family);
+  letter-spacing: 1px;
+  font-size: 18px;
+  position: relative;
+}
+.label {
+  font-size: 10px;
+}
+input {
+  width: 150px;
+}
+span {
+  display: none;
+}
+input:invalid[focused="true"] ~ span {
+  display: block;
+}
+/* .forminput {
+} */
+
+/* main page styling */
+
+.background-mobile {
+  width: 100%;
+  object-fit: cover;
+}
+.background-mobile img {
+  width: 100%;
+}
+.background-desktop {
+  display: none;
+}
+@media (min-width: 624px) {
+  .background-mobile {
+    display: none;
+  }
+  .background-desktop {
+    display: block;
+  }
+  .container {
+    display: flex;
+    overflow: hidden;
+    gap: 50px;
+    align-items: center;
+  }
+}
+
+/* form styling */
+
+.form {
+  width: 70%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.forminput {
+  width: 100%;
+}
+input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1.5px solid var(--Light-grayish-violet);
+  outline: 0;
+  font-size: 15px;
+}
+::placeholder {
+  font-size: 12px;
+}
+.flex-inputs {
+  display: flex;
+  justify-content: space-between;
+}
